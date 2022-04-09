@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- * Main wrapper -->
+
+    <main id="main" class="main--wrapper">
+      <!-- * Heading -->
+
+      <h1>Splitter</h1>
+
+      <!-- * Container Wrapper -->
+
+      <div id="tip-calculator" class="container--wrapper">
+        <!-- * Tip inputs container -->
+
+        <div class="tip-input-section">
+          <section class="bill-amount">
+            <h1>Bill</h1>
+            <div class="form-group">
+              <img src="./images/icon-dollar.svg" alt="money" />
+              <input type="text" class="bill-input" />
+            </div>
+          </section>
+
+          <section class="tip-percent">
+            <h1>Select Tip %</h1>
+            <div class="form-group btn-group">
+              <ul class="input-percent">
+                <li class="tip-percent" data-value="5">5%</li>
+                <li class="tip-percent" data-value="10">10%</li>
+                <li class="tip-percent" data-value="15">15%</li>
+                <li class="tip-percent" data-value="25">25%</li>
+                <li class="tip-percent" data-value="50">50%</li>
+                <li class="tip-percent">Custom</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="people-section">
+            <h1>Number of people <span class="active">Can't be zero</span></h1>
+            <div class="form-group">
+              <img src="./images/icon-person.svg" alt="people" />
+              <input type="text" class="people-input" />
+            </div>
+          </section>
+        </div>
+
+        <!-- * Total section -->
+
+        <div class="total-container">
+          <div class="header-section">
+            <div class="tip-amount">
+              <div class="tip-text">
+                <h1>Tip Amount</h1>
+                <p>/ person</p>
+              </div>
+              <div class="tip-value">
+                <img src="./images/icon-dollar.svg" />
+                <span class="tip-value">0.00</span>
+              </div>
+            </div>
+            <div class="total-amount">
+              <div class="total-text">
+                <h1>Total</h1>
+                <p>/ person</p>
+              </div>
+              <div class="total-amount">
+                <img src="./images/icon-dollar.svg" /><span class="total-value"
+                  >0.00</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-section">
+            <input type="button" value="RESET" class="reset-button" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
