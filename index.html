@@ -14,16 +14,7 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <!-- * Main wrapper -->
@@ -31,13 +22,12 @@
     <main id="main" class="main--wrapper">
       <!-- * Heading -->
 
-      <h1>Splitter</h1>
+      <h1 class="heading">Splitter</h1>
 
       <!-- * Container Wrapper -->
 
       <div id="tip-calculator" class="container--wrapper">
         <!-- * Tip inputs container -->
-
         <div class="tip-input-section">
           <section class="bill-amount">
             <h1>Bill</h1>
@@ -56,13 +46,18 @@
                 <li class="tip-percent" data-value="15">15%</li>
                 <li class="tip-percent" data-value="25">25%</li>
                 <li class="tip-percent" data-value="50">50%</li>
-                <li class="tip-percent">Custom</li>
+                <li class="custom-input">
+                  <input type="text" placeholder="Custom" />
+                </li>
               </ul>
             </div>
           </section>
 
           <section class="people-section">
-            <h1>Number of people <span class="active">Can't be zero</span></h1>
+            <h1>
+              Number of people
+              <span id="error" class="inactive">Can't be zero</span>
+            </h1>
             <div class="form-group">
               <img src="./images/icon-person.svg" alt="people" />
               <input type="text" class="people-input" />
@@ -80,8 +75,9 @@
                 <p>/ person</p>
               </div>
               <div class="tip-value">
-                <img src="./images/icon-dollar.svg" />
-                <span class="tip-value">0.00</span>
+                <span class="tip-amount-value"
+                  ><span class="money">$</span>0.00</span
+                >
               </div>
             </div>
             <div class="total-amount">
@@ -89,18 +85,20 @@
                 <h1>Total</h1>
                 <p>/ person</p>
               </div>
-              <div class="total-amount">
-                <img src="./images/icon-dollar.svg" /><span class="total-value"
-                  >0.00</span
+              <div class="total-value">
+                <span class="total-amount-value"
+                  ><span class="money">$</span>0.00</span
                 >
               </div>
             </div>
           </div>
           <div class="footer-section">
-            <input type="button" value="RESET" class="reset-button" />
+            <input type="button" value="RESET" class="reset-btn" />
           </div>
         </div>
       </div>
     </main>
+
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
